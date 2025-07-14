@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartPreOrder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ระบบสั่งจองอาหารล่วงหน้า</h1>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>เมนูอาหารวันนี้</h2>
+      <div class="food-list">
+        <div class="food-item">
+          <h3>ข้าวกระเพราไข่ดาว</h3>
+          <button onclick="selectFood('ข้าวกระเพราไข่ดาว')">สั่งจอง</button>
+        </div>
+        <div class="food-item">
+          <h3>ข้าวมันไก่</h3>
+          <button onclick="selectFood('ข้าวมันไก่')">สั่งจอง</button>
+        </div>
+        <div class="food-item">
+          <h3>ผัดไทย</h3>
+          <button onclick="selectFood('ผัดไทย')">สั่งจอง</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-form">
+      <h2>กรอกข้อมูลการจอง</h2>
+      <form onsubmit="submitOrder(event)">
+        <label>ชื่อผู้จอง:
+          <input type="text" id="name" required>
+        </label>
+        <label>เวลาไปรับอาหาร:
+          <input type="time" id="time" required>
+        </label>
+        <label>รายการอาหาร:
+          <input type="text" id="selectedFood" readonly>
+        </label>
+        <button type="submit">ยืนยันการจอง</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SmartPreOrder</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
